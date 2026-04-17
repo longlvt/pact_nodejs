@@ -1,5 +1,5 @@
 const path = require('path')
-const Pact = require('@pact-foundation/pact')
+const { PactV2: Pact } = require('@pact-foundation/pact')
 
 global.port = 8081
 global.provider = new Pact({
