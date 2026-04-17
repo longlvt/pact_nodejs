@@ -4,38 +4,34 @@
   },
   "interactions": [
     {
-      "description": "a request for all clients",
-      "providerState": "list of clients",
+      "description": "a request to create client with firstName and lastName",
+      "providerState": "I create a new client",
       "request": {
-        "headers": {
-          "Accept": "application/json, text/plain, */*"
+        "body": {
+          "age": 33,
+          "firstName": "Rafaela",
+          "lastName": "Azvv"
         },
-        "method": "GET",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "method": "POST",
         "path": "/clients"
       },
       "response": {
-        "body": [
-          {
-            "age": 8,
-            "firstName": "Lisa",
-            "id": 1,
-            "lastName": "Simpson"
-          },
-          {
-            "age": 30,
-            "firstName": "Wonder",
-            "id": 2,
-            "lastName": "Woman"
-          },
-          {
-            "age": 39,
-            "firstName": "Homer",
-            "id": 3,
-            "lastName": "Simpson"
-          }
-        ],
+        "body": {
+          "age": 33,
+          "firstName": "Rafaela",
+          "id": 3,
+          "lastName": "Azvv"
+        },
         "headers": {
-          "Content-Type": "application/json; charset=utf-8"
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
         },
         "status": 200
       }
