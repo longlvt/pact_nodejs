@@ -7,7 +7,7 @@ global.provider = new Pact({
     log: path.resolve(process.cwd(), '__tests__/contract/logs', 'logs-pact.log'),
     dir: path.resolve(process.cwd(), '__tests__/contract/pacts'),
     spec: 2,
-    logLevel: 'INFO',
+    logLevel: 'debug',
     pactfileWriteMode: 'overwrite',
     consumer: 'FrontEnd',
     provider: 'ClientsService'
